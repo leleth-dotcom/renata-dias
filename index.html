@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renata Dias | Enfermagem Domiciliar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <button onclick="showTab('home')">Página Inicial</button>
+    <button onclick="showTab('form')">Marque sua visita</button>
+    <button onclick="showTab('services')">Serviços</button>
+  </nav>
+
+  <div id="home">
+    <h2>Renata Dias</h2>
+    <p>Sou enfermeira especializada em cuidados domiciliares para todas as idades, com foco em pós-operatório, gestantes, puérperas e idosos.</p>
+    <div class="buttons">
+      <a href="https://wa.me/5514981066366">WhatsApp</a>
+      <a href="https://instagram.com/enfermeira.renatadias">Instagram</a>
+    </div>
+  </div>
+
+  <div id="form" style="display:none;">
+    <h3>Marque sua visita</h3>
+    <form>
+      <input type="text" name="nome" placeholder="Nome completo" required>
+
+      <label for="atendimento_proprio">O atendimento é para você mesmo?</label>
+      <select id="atendimento_proprio" name="atendimento_proprio" onchange="mostrarCampoOutro()">
+        <option value="">Selecione</option>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <div id="campo_outro" style="display:none;">
+        <input type="text" name="para_quem" placeholder="Para quem é o atendimento?">
+      </div>
+
+      <input type="tel" name="telefone" placeholder="Telefone para contato" required>
+
+      <input type="date" name="data">
+      <input type="time" name="horario">
+      <select name="tipo">
+        <option>Retirada de sonda</option>
+        <option>Curativo</option>
+        <option>Auxílio com banho</option>
+        <option>Perfuração de orelha</option>
+        <option>Acompanhamento em internação</option>
+        <option>Acompanhamento em consulta</option>
+        <option>Acompanhamento domiciliar diurno</option>
+        <option>Acompanhamento domiciliar noturno</option>
+      </select>
+      <input type="text" name="horas" placeholder="Quantidade de horas (se aplicável)">
+      <select name="categoria">
+        <option>Puerpera</option>
+        <option>Idoso</option>
+        <option>Criança</option>
+        <option>Pós operatório</option>
+        <option>Paciente acamado</option>
+        <option>Paciente PCD</option>
+        <option>Outros</option>
+      </select>
+      <button type="submit">Confirmar</button>
+    </form>
+  </div>
+
+  <div id="services" style="display:none;" class="container">
+    <div class="service-block" onclick="this.querySelector('.service-desc').style.display = 'block'">
+      <img src="placeholder.png" class="service-img">
+      <h3>Acompanhamento domiciliar</h3>
+      <p class="service-desc" style="display:none;">Acompanhamento domicilar diurno ou noturno em quantas horas for necessário para quaisquer pacientes que necessitem de assistência, durante esse período a enfermeira poderá assistir com o banho, alimentação, administração de medicação, auxílio na mobilidade, etc.</p>
+    </div>
+  </div>
+</body>
+</html>
