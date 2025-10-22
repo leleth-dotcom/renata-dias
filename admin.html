@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Renata Dias</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <div class="admin-login">
+    <h2>Painel Administrativo</h2>
+    <input type="password" id="senha" placeholder="Digite a senha">
+    <button onclick="verificarSenha()">Entrar</button>
+    <div id="painel" style="display:none;">
+      <h3>Bem-vinda, Renata!</h3>
+      <p>Aqui você poderá adicionar imagens, mudar cores e editar textos.</p>
+      <label>Cor de fundo:</label>
+      <input type="color" id="corFundo" onchange="document.body.style.backgroundColor = this.value">
+      <label>Nova imagem:</label>
+      <input type="file" accept="image/*">
+    </div>
+  </div>
+</body>
+</html>
