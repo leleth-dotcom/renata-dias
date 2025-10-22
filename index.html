@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renata Dias | Enfermagem Domiciliar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <button onclick="showTab('home')">Página Inicial</button>
+        <button onclick="showTab('agendamento')">Marque sua visita</button>
+    </nav>
+
+    <section id="home" class="tab active">
+        <div class="container">
+            <img src="renata.jpg" alt="Renata Dias" class="slide-in-left">
+            <div class="text slide-in-right">
+                <h1>Renata Dias | Enfermagem Domiciliar</h1>
+                <p>Cuidados profissionais e humanizados no conforto da sua casa.</p>
+                <div class="buttons">
+                    <a href="https://wa.me/5514981066366" target="_blank">WhatsApp</a>
+                    <a href="https://instagram.com/enfermeira.renatadias" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agendamento" class="tab">
+        <h2>Marque sua visita</h2>
+        <form action="https://formspree.io/f/mwkgnqzv" method="POST">
+            <label>Data:</label>
+            <input type="date" name="data" required>
+            <label>Horário:</label>
+            <input type="time" name="horario" required>
+            <label>Tipo de visita:</label>
+            <select name="tipo" required>
+                <optgroup label="Acompanhamento Domiciliar Noturno">
+                    <option value="Noturno - Puerpera">Puerpera</option>
+                    <option value="Noturno - Idoso">Idoso</option>
+                    <option value="Noturno - Criança">Criança</option>
+                    <option value="Noturno - Pós operatório">Pós operatório</option>
+                    <option value="Noturno - Paciente acamado">Paciente acamado</option>
+                    <option value="Noturno - Paciente PCD">Paciente PCD</option>
+                    <option value="Noturno - Outros">Outros</option>
+                </optgroup>
+                <optgroup label="Acompanhamento Domiciliar Diurno">
+                    <option value="Diurno - Puerpera">Puerpera</option>
+                    <option value="Diurno - Idoso">Idoso</option>
+                    <option value="Diurno - Criança">Criança</option>
+                    <option value="Diurno - Pós operatório">Pós operatório</option>
+                    <option value="Diurno - Paciente acamado">Paciente acamado</option>
+                    <option value="Diurno - Paciente PCD">Paciente PCD</option>
+                    <option value="Diurno - Outros">Outros</option>
+                </optgroup>
+                <option value="Retirada de sonda">Retirada de sonda</option>
+                <option value="Curativo">Curativo</option>
+                <option value="Auxílio com banho">Auxílio com banho</option>
+                <option value="Perfuração de orelha">Perfuração de orelha</option>
+                <option value="Acompanhamento em internação">Acompanhamento em internação</option>
+                <option value="Acompanhamento em exame ou consulta">Acompanhamento em exame ou consulta</option>
+            </select>
+            <label>Quantidade de horas (se aplicável):</label>
+            <input type="number" name="horas" min="1" max="24">
+            <button type="submit">Confirmar</button>
+        </form>
+    </section>
+</body>
+</html>
